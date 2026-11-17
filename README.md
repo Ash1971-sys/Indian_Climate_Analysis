@@ -12,7 +12,7 @@
 
 An independent, interactive full-stack geospatial climate analytics and passive building design platform covering **700+ districts across India**.
 
-Developed by **Divyansh Vijay**, this project combines a high-performance React/Vite web application, a Node.js/Express API backend, and an advanced Python bioclimatic analysis engine to deliver intuitive district-level climate intelligence, psychrometric visualizations, and verified meteorological dataset downloads.
+Developed by **Ashmit Rana**, this project combines a high-performance React/Vite web application, a Node.js/Express API backend, and an advanced Python bioclimatic analysis engine to deliver intuitive district-level climate intelligence, psychrometric visualizations, and verified meteorological dataset downloads.
 
 ---
 
@@ -208,10 +208,9 @@ The climate zone classification criteria and building thermal performance benchm
 
 ## 👨‍💻 Creator & Developer
 
-**Divyansh Vijay**  
+**Ashmit Rana**  
 *Creator & Lead Developer*  
-- **Email**: [divyanshvijay92@gmail.com](mailto:divyanshvijay92@gmail.com)  
-- **LinkedIn**: [divyansh-vijay](https://www.linkedin.com/in/divyansh-vijay-17187b227)  
+- **Email**: [ashmitrana71@gmail.com](mailto:ashmitrana71@gmail.com)  
 - **GitHub**: [Ash1971-sys](https://github.com/Ash1971-sys)  
 
 ---

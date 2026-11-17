@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import divyanshImage from './assets/divyansh.jpg';
 
 export default function About() {
   const [activeTab, setActiveTab] = useState('overview');
@@ -189,18 +188,23 @@ export default function About() {
                   <div className="card-body p-4 p-md-5">
                     <div className="row align-items-center">
                       <div className="col-md-4 text-center mb-4 mb-md-0">
-                        <img 
-                          src={divyanshImage} 
-                          alt="Divyansh Vijay"
-                          className="rounded-circle shadow"
+                        <div 
+                          className="rounded-circle shadow mx-auto d-flex align-items-center justify-content-center"
                           style={{
-                            width: '140px',
-                            height: '140px',
-                            objectFit: 'cover',
-                            border: '4px solid #fff'
+                            width: '130px',
+                            height: '130px',
+                            background: 'linear-gradient(135deg, #1e40af, #3b82f6)',
+                            color: '#ffffff',
+                            fontSize: '44px',
+                            fontWeight: '700',
+                            letterSpacing: '1px',
+                            border: '4px solid #fff',
+                            boxShadow: '0 4px 14px rgba(37,99,235,0.3)'
                           }}
-                        />
-                        <h4 className="fw-bold text-primary mt-3 mb-1">Divyansh Vijay</h4>
+                        >
+                          AR
+                        </div>
+                        <h4 className="fw-bold text-primary mt-3 mb-1">Ashmit Rana</h4>
                         <div className="badge bg-primary-subtle text-primary mb-2">Creator & Lead Developer</div>
                       </div>
                       <div className="col-md-8">
@@ -215,18 +219,10 @@ export default function About() {
                         </p>
                         <div className="d-flex flex-wrap gap-2 pt-2">
                           <a 
-                            href="mailto:divyanshvijay92@gmail.com" 
+                            href="mailto:ashmitrana71@gmail.com" 
                             className="btn btn-sm btn-outline-primary"
                           >
-                            <i className="bi bi-envelope me-1"></i> Email
-                          </a>
-                          <a 
-                            href="https://www.linkedin.com/in/divyansh-vijay-17187b227" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="btn btn-sm btn-outline-primary"
-                          >
-                            <i className="bi bi-linkedin me-1"></i> LinkedIn
+                            <i className="bi bi-envelope me-1"></i> ashmitrana71@gmail.com
                           </a>
                           <a 
                             href="https://github.com/Ash1971-sys/Indian_Climate_Analysis" 
