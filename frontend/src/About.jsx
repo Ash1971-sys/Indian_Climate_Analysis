@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import divyanshImage from './assets/divyansh.jpg';
-import rajSirImage from './assets/RajSir.jpg';
-import jmSirImage from './assets/JMSir.jpg';
-import vishalGargSirImage from './assets/VishalGargSir.jpg';
 
 export default function About() {
   const [activeTab, setActiveTab] = useState('overview');
@@ -11,60 +8,25 @@ export default function About() {
   const leftOffset = typeof window !== 'undefined' && window.innerWidth >= 992 ? 180 : 0;
   
   const features = [
-          {
-        icon: "🌍",
-        title: "Comprehensive Coverage",
-        description: "All India coverage using verified weather data from ISHRAE, ASHRAE and COLBE."
-      },
+    {
+      icon: "🌍",
+      title: "Comprehensive Coverage",
+      description: "All India coverage spanning over 700+ districts with verified meteorological and climate metrics."
+    },
     {
       icon: "📊",
       title: "Visual Analytics",
-      description: "Interactive climate summaries with charts, graphs, and tabular data for better understanding."
+      description: "Interactive climate summaries featuring violin plots, radiation charts, wind profiles, and hourly heatmaps."
     },
     {
       icon: "🏗️",
       title: "Climate Classification",
-      description: "Built-in climate zone classification aligned with latest research outcomes."
+      description: "Built-in climate zone classification aligned with contemporary building thermal performance criteria."
     },
     {
       icon: "🌡️",
       title: "Psychrometric Analysis",
-      description: "Interactive psychrometric analysis with passive design integration for building optimization."
-    }
-  ];
-
-  const teamMembers = [
-    {
-      name: "Divyansh Vijay",
-      email: "divyanshvijay92@gmail.com",
-      role: "B. Tech. (Summer Internship, MNIT Jaipur)",
-      institution: "SVNIT Surat",
-      image: divyanshImage,
-      profileUrl: "https://www.linkedin.com/in/divyansh-vijay-17187b227"
-    },
-    {
-      name: "Raj Gupta",
-      email: "guptaa.raj07@gmail.com",
-      role: "Research Scholar",
-      institution: "MNIT Jaipur",
-      image: rajSirImage,
-      profileUrl: "https://jouleforgelab.com/"
-    },
-    {
-      name: "Jyotirmay Mathur",
-      email: "jmathur.mech@mnit.ac.in",
-      role: "Professor",
-      institution: "MNIT Jaipur",
-      image: jmSirImage,
-      profileUrl: "https://mnit.ac.in/dept_mech/profile?fid=Qqs="
-    },
-    {
-      name: "Vishal Garg",
-      email: "vishal.garg@plaksha.edu.in",
-      role: "Professor",
-      institution: "Plaksha University",
-      image: vishalGargSirImage,
-      profileUrl: "https://plaksha.edu.in/faculty-details/dr-vishal-garg"
+      description: "Interactive bioclimatic psychrometric charts with passive cooling and heating design strategy overlays."
     }
   ];
 
@@ -95,16 +57,17 @@ export default function About() {
         {/* Hero Section */}
         <div className="text-center mb-5">
           <h1 className="display-5 fw-bold text-primary mb-3">
-            About This Tool
+            About Indian Climate Analysis
           </h1>
           <div className="lead text-muted mb-4" style={{fontSize: 18, lineHeight: 1.6}}>
-            Empowering architects, energy consultants, researchers, and policymakers with 
-            <span className="fw-semibold text-primary"> accurate climatic data</span> for sustainable building design.
+            Empowering architects, building energy consultants, environmental researchers, and policymakers with 
+            <span className="fw-semibold text-primary"> accurate, high-resolution climatic intelligence</span> for climate-responsive and sustainable building design.
           </div>
-          <div className="bg-light rounded-3 p-3 d-inline-block">
-            <span className="badge bg-primary me-2">All India</span>
-            <span className="badge bg-success me-2">Verified Data</span>
-            <span className="badge bg-info">Interactive Analysis</span>
+          <div className="bg-light rounded-3 p-3 d-inline-block shadow-sm">
+            <span className="badge bg-primary me-2">Independent Project</span>
+            <span className="badge bg-success me-2">All-India Coverage</span>
+            <span className="badge bg-info me-2">Verified Climate Data</span>
+            <span className="badge bg-dark">Open Source</span>
           </div>
         </div>
 
@@ -130,11 +93,11 @@ export default function About() {
           </li>
           <li className="nav-item" role="presentation">
             <button 
-              className={`nav-link ${activeTab === 'team' ? 'active' : ''}`}
-              onClick={() => setActiveTab('team')}
+              className={`nav-link ${activeTab === 'developer' ? 'active' : ''}`}
+              onClick={() => setActiveTab('developer')}
               type="button"
             >
-              <i className="bi bi-people me-2"></i>Team
+              <i className="bi bi-person-badge me-2"></i>Developer
             </button>
           </li>
           <li className="nav-item" role="presentation">
@@ -143,7 +106,7 @@ export default function About() {
               onClick={() => setActiveTab('sources')}
               type="button"
             >
-              <i className="bi bi-link-45deg me-2"></i>Data Sources
+              <i className="bi bi-link-45deg me-2"></i>Data Sources & References
             </button>
           </li>
         </ul>
@@ -158,13 +121,17 @@ export default function About() {
                 <div className="card h-100 border-0 shadow-sm">
                   <div className="card-body p-4">
                     <h3 className="card-title text-primary mb-3">
-                      <i className="bi bi-lightbulb me-2"></i>Our Mission
+                      <i className="bi bi-lightbulb me-2"></i>Project Mission
                     </h3>
-                    <p className="card-text" style={{fontSize: 16, lineHeight: 1.7}}>
-                      This comprehensive climate analysis tool bridges the gap between research and practical application 
-                      in sustainable building design. By providing access to verified weather data and advanced analytical 
-                      capabilities, we enable professionals to make informed decisions for energy-efficient and 
-                      climate-responsive architecture.
+                    <p className="card-text text-secondary" style={{fontSize: 16, lineHeight: 1.8}}>
+                      The <strong>Indian Climate Analysis Platform</strong> was conceived and developed as an independent,
+                      end-to-end data platform bridging the gap between raw meteorological datasets and practical application
+                      in passive, energy-efficient architecture across India.
+                    </p>
+                    <p className="card-text text-secondary" style={{fontSize: 16, lineHeight: 1.8}}>
+                      By centralizing verified weather files, interactive geospatial visualizations, and advanced bioclimatic
+                      algorithms, this platform provides practitioners and enthusiasts with immediate access to district-level
+                      climate classifications, comfort zone overlays, and multi-format data exports (EPW, BINM, CSV).
                     </p>
                   </div>
                 </div>
@@ -173,20 +140,20 @@ export default function About() {
                 <div className="card border-0 shadow-sm h-100">
                   <div className="card-body p-4">
                     <h4 className="card-title text-primary mb-3">
-                      <i className="bi bi-graph-up me-2"></i>Key Statistics
+                      <i className="bi bi-graph-up me-2"></i>Key Metrics
                     </h4>
                     <div className="d-flex flex-column gap-3">
                       <div className="text-center p-3 bg-primary bg-opacity-10 rounded">
-                        <div className="h3 text-primary mb-1">All India</div>
-                        <div className="text-muted small">Coverage</div>
+                        <div className="h3 text-primary mb-1">700+</div>
+                        <div className="text-muted small">Districts Mapped</div>
                       </div>
                       <div className="text-center p-3 bg-success bg-opacity-10 rounded">
-                        <div className="h3 text-success mb-1">3</div>
-                        <div className="text-muted small">Data Sources</div>
+                        <div className="h3 text-success mb-1">3 Formats</div>
+                        <div className="text-muted small">EPW · BINM · CSV</div>
                       </div>
                       <div className="text-center p-3 bg-info bg-opacity-10 rounded">
-                        <div className="h3 text-info mb-1">4</div>
-                        <div className="text-muted small">Core Features</div>
+                        <div className="h3 text-info mb-1">Interactive</div>
+                        <div className="text-muted small">Psychrometric Engine</div>
                       </div>
                     </div>
                   </div>
@@ -214,67 +181,79 @@ export default function About() {
             </div>
           </div>
 
-          {/* Team Tab */}
-          <div className={`tab-pane fade ${activeTab === 'team' ? 'show active' : ''}`}>
-            <div className="row g-4">
-              {teamMembers.map((member, index) => (
-                <div key={index} className="col-md-6 col-lg-3">
-                  <div className="card h-100 border-0 shadow-sm hover-lift text-center">
-                    <div className="card-body p-4">
-                      <div className="mb-3 d-flex justify-content-center">
+          {/* Developer Tab */}
+          <div className={`tab-pane fade ${activeTab === 'developer' ? 'show active' : ''}`}>
+            <div className="row justify-content-center">
+              <div className="col-lg-8">
+                <div className="card border-0 shadow-sm hover-lift">
+                  <div className="card-body p-4 p-md-5">
+                    <div className="row align-items-center">
+                      <div className="col-md-4 text-center mb-4 mb-md-0">
                         <img 
-                          src={member.image} 
-                          alt={`${member.name} profile`}
-                          className="rounded-circle"
+                          src={divyanshImage} 
+                          alt="Divyansh Vijay"
+                          className="rounded-circle shadow"
                           style={{
-                            width: '80px',
-                            height: '80px',
+                            width: '140px',
+                            height: '140px',
                             objectFit: 'cover',
-                            border: '3px solid #f8f9fa',
-                            boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+                            border: '4px solid #fff'
                           }}
                         />
+                        <h4 className="fw-bold text-primary mt-3 mb-1">Divyansh Vijay</h4>
+                        <div className="badge bg-primary-subtle text-primary mb-2">Creator & Lead Developer</div>
                       </div>
-                      <h5 className="card-title text-primary mb-2">
-                        {member.profileUrl ? (
+                      <div className="col-md-8">
+                        <h5 className="text-dark fw-semibold mb-3">About the Creator</h5>
+                        <p className="text-secondary" style={{fontSize: 15, lineHeight: 1.7}}>
+                          Independent full-stack developer and climate data enthusiast who conceptualized, architected, 
+                          and engineered the <strong>Indian Climate Analysis</strong> platform from the ground up.
+                        </p>
+                        <p className="text-secondary" style={{fontSize: 15, lineHeight: 1.7}}>
+                          Passionate about software systems that solve tangible environmental problems, combining full-stack web technologies 
+                          (React, Vite, Node.js, Express) with data science engines (Python, D3.js, Plotly) to make complex scientific data intuitive and accessible.
+                        </p>
+                        <div className="d-flex flex-wrap gap-2 pt-2">
                           <a 
-                            href={member.profileUrl} 
+                            href="mailto:divyanshvijay92@gmail.com" 
+                            className="btn btn-sm btn-outline-primary"
+                          >
+                            <i className="bi bi-envelope me-1"></i> Email
+                          </a>
+                          <a 
+                            href="https://www.linkedin.com/in/divyansh-vijay-17187b227" 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="text-decoration-none"
-                            title="View Profile"
+                            className="btn btn-sm btn-outline-primary"
                           >
-                            {member.name}
-                            <i className="bi bi-box-arrow-up-right ms-1" style={{fontSize: '0.8em'}}></i>
+                            <i className="bi bi-linkedin me-1"></i> LinkedIn
                           </a>
-                        ) : (
-                          member.name
-                        )}
-                      </h5>
-                      <p className="text-muted small mb-2">
-                        <i className="bi bi-envelope me-1"></i>
-                        <a href={`mailto:${member.email}`} className="text-decoration-none">
-                          {member.email}
-                        </a>
-                      </p>
-                      <p className="text-success fw-semibold mb-1">{member.role}</p>
-                      <p className="text-muted small">{member.institution}</p>
+                          <a 
+                            href="https://github.com/Ash1971-sys/Indian_Climate_Analysis" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="btn btn-sm btn-outline-dark"
+                          >
+                            <i className="bi bi-github me-1"></i> GitHub Repository
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
 
           {/* Sources Tab */}
           <div className={`tab-pane fade ${activeTab === 'sources' ? 'show active' : ''}`}>
-            {/* Research Collaboration Section */}
+            {/* Research Reference Section */}
             <div className="mb-4">
               <h5 className="text-success mb-2">
-                <i className="bi bi-people me-2"></i>Research Collaboration
+                <i className="bi bi-journal-text me-2"></i>Research Reference & Methodology
               </h5>
               <p className="text-muted mb-2">
-                Our climate zone classification is aligned with the latest research outcomes.
+                The climate zone classification criteria and building thermal performance benchmarks implemented in this platform reference published scientific literature:
               </p>
               <div className="bg-light rounded p-3 border-start border-4 border-primary">
                 <small className="text-muted">
@@ -293,7 +272,11 @@ export default function About() {
                 </a>
               </div>
             </div>
+
             {/* Data Sources List */}
+            <h5 className="text-primary mb-3">
+              <i className="bi bi-database me-2"></i>Meteorological & Climate Data Sources
+            </h5>
             <div className="row g-4">
               {sources.map((source, index) => (
                 <div key={index} className="col-md-4">
@@ -362,4 +345,4 @@ export default function About() {
       `}</style>
     </div>
   );
-} 
+}

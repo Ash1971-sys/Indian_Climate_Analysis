@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Home, Info, HelpCircle, Menu } from "react-feather";
+import { Home, Info, HelpCircle, Menu, Globe } from "react-feather";
 import { Link } from 'react-router-dom';
 import "./VerticalNavbar.css";
 
@@ -34,7 +34,7 @@ export default function VerticalNavbar() {
           className="vertical-navbar__menu"
           onClick={e => e.stopPropagation()}
         >
-          {/* MNIT Logo absolutely at the top of the navbar */}
+          {/* Brand Logo at the top of the navbar */}
           <div style={{
             position: 'absolute',
             top: 18,
@@ -45,10 +45,22 @@ export default function VerticalNavbar() {
             justifyContent: 'center',
             zIndex: 101,
           }}>
-            <a href="https://mnit.ac.in/" target="_blank" rel="noopener noreferrer" className="vertical-navbar__link" tabIndex={0} style={{ padding: 0, background: 'none' }}>
-              <img src="/mnit.png" alt="MNIT Logo" style={{ width: 32, height: 32, objectFit: 'contain', borderRadius: 6, background: '#fff' }} />
-              <span className="vertical-navbar__tooltip">MNIT Jaipur</span>
-            </a>
+            <Link to="/" className="vertical-navbar__link" tabIndex={0} style={{ padding: 0, background: 'none' }}>
+              <div style={{
+                width: 36,
+                height: 36,
+                borderRadius: 10,
+                background: 'linear-gradient(135deg, #2563eb, #38bdf8)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: '#fff',
+                boxShadow: '0 2px 8px rgba(37,99,235,0.3)'
+              }}>
+                <Globe size={22} />
+              </div>
+              <span className="vertical-navbar__tooltip">Indian Climate Analysis</span>
+            </Link>
           </div>
           {navItems.map((item) => (
             <li className="vertical-navbar__item" key={item.label}>
